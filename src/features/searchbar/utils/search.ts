@@ -17,6 +17,8 @@ export type SearchOutputSchemaType = z.infer<typeof SearchOutputSchema>;
 
 export async function search(data: SearchInputSchemaType) {
   const _data = SearchInputSchema.parse(data);
+  console.log({ _data });
+
   await new Promise((resolve) => setTimeout(resolve, 1500));
   return SearchOutputSchema.parse({
     all: 3,

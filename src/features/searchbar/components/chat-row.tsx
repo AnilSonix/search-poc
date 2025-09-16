@@ -36,9 +36,11 @@ export default function ChatRow({ className, sender, message, link }: Props) {
       <div className={cn("ml-auto invisible group-hover:visible")}>
         <CopyToClipboard text="Some link here" />
 
-        <Button variant={"ghost"} size={"sm"} className="text-gray-500">
-          <ExternalLink /> New Tab
-        </Button>
+        <a href={link} target="_blank">
+          <Button variant={"ghost"} size={"sm"} className="text-gray-500 ml-2">
+            <ExternalLink /> New Tab
+          </Button>
+        </a>
       </div>
     </div>
   );

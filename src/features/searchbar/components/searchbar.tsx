@@ -22,7 +22,7 @@ export default function Searchbar({}: Props) {
 
 const MotionCard = motion.create(Card);
 function Resizer({ children }: PropsWithChildren) {
-  const { opened, setOpened } = useSearchBarContext();
+  const { opened } = useSearchBarContext();
 
   return (
     <MotionCard
