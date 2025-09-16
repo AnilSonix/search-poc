@@ -5,13 +5,13 @@ export default function Brand() {
   return (
     <>
       <div className="flex gap-3 mt-3">
-        <a href="" target="_blank">
+        <a href="https://github.com/AnilSonix/search-poc" target="_blank">
           <Button variant={"outline"}>
             <Github />
             View source
           </Button>
         </a>
-        <a href="" target="_blank">
+        <a href="https://www.linkedin.com/in/anilsonix/" target="_blank">
           <Button variant={"outline"}>
             <LinkedinIcon />
             Linkedin
