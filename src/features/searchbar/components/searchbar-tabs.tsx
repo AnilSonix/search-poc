@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AnimatePresence, motion } from "motion/react";
 import { useSearchBarContext } from "../contexts/searchbar-provider";
+import ItemSkeleton from "./item-skeleton";
 import SettingsMenu from "./settings-menu";
 
 export default function SearchBarTabs() {
@@ -49,7 +50,15 @@ export default function SearchBarTabs() {
                 key={t.id}
                 className="flex flex-col gap-2 my-2 mx-8"
               >
-                {<t.content />}
+                {query.isPending ? (
+                  <div className="flex flex-col gap-6">
+                    <ItemSkeleton />
+                    <ItemSkeleton />
+                    <ItemSkeleton />
+                  </div>
+                ) : (
+                  <t.content />
+                )}
               </TabsContent>
             ))}
           </Tabs>
